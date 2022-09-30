@@ -1,6 +1,19 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
 
+function randomInt(min, max) {
+  if (!max) {
+    max = min;
+    min = 0;
+  }
+  var rand = Math.random();
+  return Math.floor(min * (1 - rand) + rand * max);
+}
+
+function getRandomItem(list) {
+  return list[randomInt(list.length)];
+}
+
 function generatePassword() {
   var userInput = window.prompt("How long do you want your password to be?");
 
@@ -8,8 +21,8 @@ function generatePassword() {
 
   if (isNaN(passwordLength)) {
     window.alert("Password length needs to be a number.");
-    return;
-    c;
+    return
+    
   }
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Password length needs to be between 8 and 128 characters.");
@@ -118,8 +131,23 @@ function generatePassword() {
     optionsCart.push(uppercaseList);
   }
 
-  console.log(optionsCart);
-}
+  if (optionsCart.length === 0) {
+    optionsCart.push(lowercaseList)
+    
+
+  
+
+  var generatePassword = "";
+
+  for (var i = 0; i < passwordLength; i++) {
+    var randomList = getRandomItem(optionsCart);
+    var randomChar = getRandomItem(randomList);
+    generatePassword += randomChar;
+  }
+
+  return generatePassword
+
+
 // Get references to the #generate element
 
 // Write password to the #password input
