@@ -8,7 +8,8 @@ function generatePassword() {
 
   if (isNaN(passwordLength)) {
     window.alert("Password length needs to be a number.");
-    return;c
+    return;
+    c;
   }
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Password length needs to be between 8 and 128 characters.");
@@ -34,7 +35,7 @@ function generatePassword() {
     "D",
     "E",
     "F",
-    "
+
     "I",
     "J",
     "K",
@@ -100,26 +101,25 @@ function generatePassword() {
   ];
 
   var optionsCart = [];
+
+  if (userWantsNumbers === true) {
+    optionsCart.push(numberList);
+  }
+
+  if (userWantsSymbols === true) {
+    optionsCart.push(symbolList);
+  }
+
+  if (userWantsLowercase === true) {
+    optionsCart.push(lowercaseList);
+  }
+
+  if (userWantsUppercase === true) {
+    optionsCart.push(uppercaseList);
+  }
+
+  console.log(optionsCart);
 }
-
-if (userWantsNumbers === true) {
-  optionsCart.push(numberList);
-}
-
-if (userWantsSymbols === true) {
-  optionsCart.push(symbolList);
-}
-
-if (userWantsLowercase === true) {
-  optionsCart.push(lowercaseList);
-}
-
-if (userWantsUppercase === true) {
-  optionsCart.push(uppercaseList);
-}
-
-console.log(optionsCart);
-
 // Get references to the #generate element
 
 // Write password to the #password input
