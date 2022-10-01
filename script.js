@@ -1,6 +1,6 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
-
+// Getting the generator to produce random passwords
 function randomInt(min, max) {
   if (!max) {
     max = min;
@@ -16,6 +16,8 @@ function getRandomItem(list) {
 
 function generatePassword() {
   var userInput = window.prompt("How long do you want your password to be?");
+
+  //Allowing the user to choose some of the passwords character traits.
 
   var passwordLength = parseInt(userInput);
 
@@ -60,7 +62,7 @@ function generatePassword() {
   } else {
     window.alert("Your password will not contain Uppercase letters.");
   }
-
+  // my list of all possible varaiables
   var uppercaseList = [
     "A",
     "B",
