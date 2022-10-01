@@ -21,8 +21,7 @@ function generatePassword() {
 
   if (isNaN(passwordLength)) {
     window.alert("Password length needs to be a number.");
-    return
-    
+    return;
   }
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Password length needs to be between 8 and 128 characters.");
@@ -132,10 +131,8 @@ function generatePassword() {
   }
 
   if (optionsCart.length === 0) {
-    optionsCart.push(lowercaseList)
-    
-
-  
+    optionsCart.push(lowercaseList);
+  }
 
   var generatePassword = "";
 
@@ -145,9 +142,8 @@ function generatePassword() {
     generatePassword += randomChar;
   }
 
-  return generatePassword
-
-
+  return generatePassword;
+}
 // Get references to the #generate element
 
 // Write password to the #password input
@@ -156,7 +152,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
