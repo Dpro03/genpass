@@ -6,10 +6,10 @@ function randomInt(min, max) {
     max = min;
     min = 0;
   }
+
   var rand = Math.random();
   return Math.floor(min * (1 - rand) + rand * max);
 }
-
 function getRandomItem(list) {
   return list[randomInt(list.length)];
 }
@@ -30,15 +30,36 @@ function generatePassword() {
   var userWantsNumbers = window.confirm(
     "Would you like to include numbers in your password?"
   );
+  if (userWantsNumbers) {
+    window.alert("Your password will have number.");
+  } else {
+    window.alert("Your password will not contain numbers.");
+  }
+
   var userWantsSymbols = window.confirm(
     "Would you like to include symbols in your password?"
   );
+  if (userWantsSymbols) {
+    window.alert("Your password will include symbols.");
+  } else {
+    window.alert("Your password will not include symbols.");
+  }
   var userWantsLowercase = window.confirm(
     "Would you like to include lowercase letters in your password?"
   );
+  if (userWantsLowercase) {
+    window.alert("Your password will include lowercase letters.");
+  } else {
+    window.alert("Your password will not include lowercase letters.");
+  }
   var userWantsUppercase = window.confirm(
     "Would you like to include uppercase letters in your password?"
   );
+  if (userWantsUppercase) {
+    window.alert("Your password will include Uppercase letters.");
+  } else {
+    window.alert("Your password will not contain Uppercase letters.");
+  }
 
   var uppercaseList = [
     "A",
