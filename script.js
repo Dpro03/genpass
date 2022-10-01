@@ -31,7 +31,7 @@ function generatePassword() {
     "Would you like to include numbers in your password?"
   );
   if (userWantsNumbers) {
-    window.alert("Your password will have number.");
+    window.alert("Your password will contain numbers.");
   } else {
     window.alert("Your password will not contain numbers.");
   }
